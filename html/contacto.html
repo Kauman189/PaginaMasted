@@ -1,0 +1,99 @@
+<!-- Comenzamos el documento HTML -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuramos el conjunto de caracteres y la compatibilidad con Internet Explorer -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Configuramos la visualización del sitio en diferentes dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlazamos el archivo de estilos CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Añadimos el nombre del autor y la descripción del sitio web -->
+    <meta name="Camilo" content="Portfolio">
+    <!-- Agrega la etiqueta de script para cargar la API -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script type="text/javascript" src="../scriptsjava/mapa.js"></script>
+
+    <!-- Definimos el título de la página -->
+    <title>Portfolio</title>
+</head>
+<body onload="initMap()">
+    <!-- Comenzamos el encabezado de la página -->
+    
+<header id="navbar">
+        <ul>
+            <!-- Añadimos el botón del logo y los enlaces de navegación -->
+            <li><a id="botonlogo" href="./index.html"></a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Proyectos.html">Proyectos</a></li>
+            <li><a href="presupuesto.html">Formulario</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <!-- Añadimos el menú desplegable de acceso -->
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Acceso</a>
+                <div class="dropdown-content">
+                    <a href="#">Iniciar sesión</a>
+                    <a href="#">Crear cuenta</a>
+                </div>
+            </li>
+        </ul>
+</header>
+    
+    <!-- Definición de la sección de contacto -->
+<section id="contacto">
+    <!-- Título de la sección -->
+    <h1>Contacto</h1>
+    <!-- Descripción de la ubicación -->
+    <p>Estamos ubicados en la siguiente dirección:</p>
+    <!-- Dirección -->
+    <address>
+        Calle 123 #456<br>
+        Ciudad, País<br>
+        Código postal: 12345
+    </address>
+    <!-- Información de contacto -->
+    <p>También puedes comunicarte con nosotros a través de:</p>
+    <ul>
+        <!-- Número de teléfono -->
+        <li>Teléfono: +12 345 6789</li>
+        <!-- Dirección de correo electrónico -->
+        <li>Email: contacto@empresa.com</li>
+        <!-- Enlaces a las redes sociales -->
+        <li>Redes sociales: 
+            <a href="#">Facebook</a>, 
+            <a href="#">Twitter</a>, 
+            <a href="#">Instagram</a>
+        </li>
+    </ul>
+    <div id="map" style="height: 400px;"></div>
+
+    
+</section>
+
+    
+<!-- Inicio del footer -->
+<footer>
+    <!-- Contenedor principal del footer -->
+    <div class="footer-container">
+      <!-- Sección de iconos de redes sociales -->
+      <div class="social-icons">
+        <a href="https://www.instagram.com/"><img src="../imgs/instagram.png" alt="Instagram"></a>
+        <a href="https://www.twitter.com/"><img src="../imgs/twitter.png" alt="Twitter"></a>
+        <a href="https://www.linkedin.com/"><img src="../imgs/linkedin.png" alt="LinkedIn"></a>
+      </div>
+      <!-- Sección de información de contacto -->
+      <div class="contact-info">
+        <p>Correo electrónico: camiloarias.frg@gmail.com</p>
+        <p>Teléfono: (+34) 656378367</p>
+      </div>
+    </div>
+    <!-- Sección de aviso legal -->
+    <div class="legal-notice">
+      <p>© 2023, Todos los derechos reservados. Este sitio web ha sido creado como proyecto final del curso de diseño web. Cualquier uso no autorizado o duplicación de los materiales en este sitio web, sin el permiso expreso y por escrito del autor y propietario, está estrictamente prohibido. El contenido de este sitio web es puramente educativo y no representa ninguna opinión o posición oficial de la institución o empresas mencionadas.</p>
+    </div>
+</footer>
+<!-- Fin del footer -->
+<script src="../scriptsjava/mapa.js"></script>      
+</body>
+</html>

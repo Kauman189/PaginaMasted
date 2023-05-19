@@ -1,0 +1,717 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #FFFEF7;
+}
+
+h2 {
+  font-size: 32px;
+  color: #000000;
+  margin: 0;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  
+}
+
+
+/* Estilos para la barra de navegación */
+#navbar {
+  /* Fondo de la barra */
+  background-color: #FFFEF7;
+  /* Altura de la barra */
+  height: 80px;
+  /* Estilos flexbox */
+  display: flex;
+  align-items: center;
+  font-family: 'Caveat', cursive;
+}
+
+/* Estilos para el borde inferior de la barra */
+#navbar {
+  border-bottom: 1px solid black;
+}
+
+/* Estilos para la lista de enlaces */
+#navbar ul {
+  /* Quitar los puntos de la lista */
+  list-style: none;
+  /* Estilos flexbox */
+  display: flex;
+  justify-content: space-between;
+  /* Centrar la lista horizontalmente */
+  margin: 0 auto;
+  /* Establecer el ancho máximo */
+  max-width: 1400px;
+  /* Ancho del 100% */
+  width: 100%;
+  /* Agregar un espacio entre el borde y la lista */
+  padding: 0 10px;
+}
+
+/* Estilos para los elementos de la lista */
+#navbar li {
+  /* Estilos flexbox */
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para el primer elemento de la lista (logo) */
+#navbar li:first-child {
+  /* Establecer el fondo */
+  background: url(../imgs/logo.png) no-repeat left center;
+  /* Tamaño del fondo */
+  background-size: auto 100%;
+  /* Altura */
+  height: 100px;
+  /* Ancho */
+  width: 120px;
+  /* Espacio a la derecha */
+  margin-right: 10px;
+  /* Espacio arriba */
+  margin-top: 20px;
+  /* Alineación horizontal */
+  align-items: left;
+}
+
+/* Estilos para los enlaces */
+#navbar a {
+  /* Color del texto */
+  color: #000000;
+  /* Sin subrayado */
+  text-decoration: none;
+  /* Tamaño de fuente */
+  font-size: 20px;
+  /* Grosor de fuente */
+  font-weight: 500;
+  /* Sin espaciado */
+  padding: 0px;
+  /* Transición suave */
+  transition: all 0.2s ease-in-out;
+}
+
+#navbar a:hover {
+  /* Cambiar el color del texto */
+  color: #ff0066;
+  /* Añadir un subrayado */
+  text-decoration: underline;
+  /* Aumentar el tamaño de fuente */
+  font-size: 22px;
+}
+
+
+/* Estilos para el botón de logo */
+#botonlogo {
+  /* Mostrar como bloque */
+  display: block;
+  /* Altura */
+  height: 60px;
+  /* Ancho */
+  width: 100px;
+  /* Tamaño del fondo */
+  background-size: auto 100%;
+  /* Sin borde */
+  border: none;
+}
+
+  
+ /* Estilo para el botón de acceso */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo para el botón de acceso */
+.dropbtn {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Estilo para los enlaces del menú desplegable */
+.dropdown-content a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Estilo para los enlaces del menú desplegable al pasar el cursor */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar el menú desplegable cuando se pasa el cursor sobre el botón de acceso */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+  /* Estilos de secciones */
+  section {
+    padding: 80px 0;
+    position: relative;
+  }
+  
+  #main:before,
+  #extra:before,
+  #refs:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  #main:before {
+    left: 0;
+    z-index: -1;
+  }
+  
+  #extra:before {
+    right: 0;
+    z-index: -1;
+  }
+  
+  #refs:before {
+    left: 0;
+    z-index: -1;
+  }
+  
+  /* Estilos de imágenes */
+  .image-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  .image-text img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .image-text .text {
+    max-width: 50%;
+    margin: 0 30px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Posicionamiento de imágenes */
+  .image-text .left {
+    order: -1;
+  }
+  
+  .image-text .right {
+    order: 1;
+  }
+  
+  /* Animaciones */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Estilos para el footer */
+  
+footer {
+  background-color: #FFFEF7;
+  padding: 1px 0;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  color: #000000;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 100px;
+  position: relative;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.4);
+}
+
+/* Información de contacto */ 
+
+.contact-info {
+  text-align: right;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.contact-info span {
+  display: block;
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #777;
+}
+
+/* Aviso legal */
+
+.legal-notice {
+  background-color: #FFFEF7;
+  padding: 4px 0;
+  font-size: 8px;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  text-align: center;
+}
+
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    margin-top: 20px;
+  }
+}
+
+  
+
+/* Estilos para el formulario */
+
+form {
+  max-width: 500px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin: auto;
+  position: relative;
+}
+
+/* Estilos para el título del formulario */
+form h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los campos del formulario */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Estilos para los campos de formulario activos */
+form input:focus,
+form textarea:focus {
+  outline: none;
+}
+
+/* Estilos para el botón de envío */
+form button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 30px;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: none;
+}
+
+/* Estilos para el botón de envío cuando se pasa el mouse sobre él */
+form button:hover {
+  background-color: #ff6b6b;
+}
+
+/* Estilos para el campo de texto multilínea */
+form textarea {
+  height: 120px;
+}
+
+/* Estilos para la animación de entrada */
+.form-entrada {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: entrada 0.5s ease forwards;
+}
+
+/* Estilos para la animación de entrada del botón */
+.btn-entrada {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: entrada-btn 0.5s ease forwards;
+}
+  /* Animación de entrada */
+  @keyframes entrada {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animación de entrada del botón */
+  @keyframes entrada-btn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+/* Checkbox styling */
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  height: 25px;
+  width: 25px;
+  background-color: #d6d1d1;
+  border: #2196F3;
+  border-radius: 40px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #737070;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Todo el codigo superior hace referencia al checkbox de la pagina con el formulario para aceptar privacidad */
+
+
+
+#main form h2 {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#main form label[for="producto"],
+#main form label[for="extras"],
+#main form label[for="plazo"] {
+  display: block;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#main form select[name="producto"],
+#main form input[name="plazo"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#main form ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#main form li input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+#main form #presupuestoFinal {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+label[for="animaciones"], label[for="scripts"], label[for="soporte"] {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+
+/* Estilos para la sección de contacto */
+#contacto {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 10px;
+  padding: 50px;
+}
+
+#contacto h1 {
+  color: #ff0066;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#contacto p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contacto address {
+  font-style: normal;
+}
+
+#contacto ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contacto li {
+  margin-bottom: 10px;
+}
+
+#contacto a {
+  color: #ff0066;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#contacto a:hover {
+  color: #333;
+}
+
+#contacto img {
+  margin-top: 3px;
+  max-width: 30%;
+  transition: all 0.3s ease;
+}
+
+#contacto img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para la sección de contacto */
+
+/* Estilos para la galeria dinamica */
+
+
+#projects {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#projects .project:not(:first-child) {
+  display: none;
+}
+
+
+#projects h1 {
+  font-size: 40px;
+}
+
+#projects .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#projects .project {
+  margin: 10px;
+  width: calc(70% - 2 );
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+#projects .project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+#projects .project:hover img {
+  transform: scale(1.2);
+}
+
+#projects .project h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: transform 0.5s ease;
+  transform: translateY(100%);
+}
+
+#projects .project:hover h2 {
+  transform: translateY(0);
+}
+
+#projects .arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#projects .arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#projects .arrow-left {
+  left: 20px;
+}
+
+#projects .arrow-right {
+  right: 20px;
+}

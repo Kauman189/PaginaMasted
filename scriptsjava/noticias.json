@@ -1,0 +1,20 @@
+{
+    "noticias": [
+      {
+        "titulo": "Noticia 1",
+        "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "imagen": "imgs/noticia1.jpg"
+      },
+      {
+        "titulo": "Noticia 2",
+        "texto": "Pellentesque sit amet enim id risus efficitur tincidunt.",
+        "imagen": "imgs/noticia2.jpg"
+      },
+      {
+        "titulo": "Noticia 3",
+        "texto": "Sed fermentum tincidunt tortor id ullamcorper.",
+        "imagen": "imgs/noticia3.jpg"
+      }
+    ]
+  }
+  

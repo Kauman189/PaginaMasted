@@ -1,0 +1,108 @@
+<!-- Comenzamos el documento HTML -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Configuramos el conjunto de caracteres y la compatibilidad con Internet Explorer -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Configuramos la visualización del sitio en diferentes dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enlazamos el archivo de estilos CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <meta name="Camilo" content="Portfolio" />
+    <title>Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scriptsjava/mi_script.js"></script>
+  </head>
+  <body>
+    <!-- Comenzamos el encabezado de la página -->
+    <header id="navbar">
+      <ul>
+        <!-- Añadimos el botón del logo y los enlaces de navegación -->
+        <li><a id="botonlogo" href="./index.html"></a></li>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./Proyectos.html">Proyectos</a></li>
+        <li><a href="./presupuesto.html">Formulario</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <!-- Añadimos el menú desplegable de acceso -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Acceso</a>
+          <div class="dropdown-content">
+            <a href="#">Iniciar sesión</a>
+            <a href="#">Crear cuenta</a>
+          </div>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Sección de proyectos con una cuadrícula de proyectos -->
+
+    <section id="projects">
+      <div class="grid">
+        <div class="project">
+          <a href="../imgs/proyecto1.png">
+            <img src="../imgs/proyecto1.png" alt="Proyecto 1" />
+          </a>
+          <h2>Proyecto 1</h2>
+        </div>
+        <div class="project">
+          <a href="../imgs/proyecto2.png">
+            <img src="../imgs/proyecto2.png" alt="Proyecto 2" />
+          </a>
+          <h2>Proyecto 2</h2>
+        </div>
+        <div class="project">
+          <a href="../imgs/proyecto3.png">
+            <img src="../imgs/proyecto3.png" alt="Proyecto 3" />
+          </a>
+          <h2>Proyecto 3</h2>
+        </div>
+        <div class="project">
+          <a href="../imgs/proyecto4.png">
+            <img src="../imgs/proyecto4.png" alt="Proyecto 4" />
+          </a>
+          <h2>Proyecto 4</h2>
+        </div>
+        <div class="arrow arrow-left">&#8249;</div>
+        <div class="arrow arrow-right">&#8250;</div>
+      </div>
+    </section>
+
+    <!-- Inicio del footer -->
+    <footer>
+      <!-- Contenedor principal del footer -->
+      <div class="footer-container">
+        <!-- Sección de iconos de redes sociales -->
+        <div class="social-icons">
+          <a href="https://www.instagram.com/"
+            ><img src="../imgs/instagram.png" alt="Instagram"
+          /></a>
+          <a href="https://www.twitter.com/"
+            ><img src="../imgs/twitter.png" alt="Twitter"
+          /></a>
+          <a href="https://www.linkedin.com/"
+            ><img src="../imgs/linkedin.png" alt="LinkedIn"
+          /></a>
+        </div>
+        <!-- Sección de información de contacto -->
+        <div class="contact-info">
+          <p>Correo electrónico: camiloarias.frg@gmail.com</p>
+          <p>Teléfono: (+34) 656378367</p>
+        </div>
+      </div>
+      <!-- Sección de aviso legal -->
+      <div class="legal-notice">
+        <p>
+          © 2023, Todos los derechos reservados. Este sitio web ha sido creado
+          como proyecto final del curso de diseño web. Cualquier uso no
+          autorizado o duplicación de los materiales en este sitio web, sin el
+          permiso expreso y por escrito del autor y propietario, está
+          estrictamente prohibido. El contenido de este sitio web es puramente
+          educativo y no representa ninguna opinión o posición oficial de la
+          institución o empresas mencionadas.
+        </p>
+      </div>
+    </footer>
+    <!-- Fin del footer -->
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!-- Comenzamos el documento HTML -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Configuramos el conjunto de caracteres y la compatibilidad con Internet Explorer -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Configuramos la visualización del sitio en diferentes dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enlazamos el archivo de estilos CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <!-- Añadimos el nombre del autor y la descripción del sitio web -->
+    <meta name="Camilo" content="Portfolio" />
+    <!-- Definimos el título de la página -->
+    <title>Portfolio</title>
+  </head>
+<body>
+    <!-- Comenzamos el encabezado de la página -->
+    <header id="navbar">
+        <ul>
+            <!-- Añadimos el botón del logo y los enlaces de navegación -->
+            <li><a id="botonlogo" href="./index.html"></a></li>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./Proyectos.html">Proyectos</a></li>
+            <li><a href="./presupuesto.html">Formulario</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <!-- Añadimos el menú desplegable de acceso -->
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Acceso</a>
+                <div class="dropdown-content">
+                    <a href="#">Iniciar sesión</a>
+                    <a href="#">Crear cuenta</a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    
+
+    <section id="main">
+      <form>
+        <!-- Campo para ingresar el nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required /><br /><br />
+    
+        <!-- Campo para ingresar el email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+    
+        <!-- Campo para ingresar el teléfono -->
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required /><br /><br />
+    
+        <!-- Campo para ingresar la solicitud de información -->
+        <label for="solicitud">Solicite más información:</label><br />
+        <textarea id="solicitud" name="solicitud"></textarea><br /><br />
+    
+        <!-- Checkbox para aceptar las políticas de privacidad -->
+        <label class="checkbox-container">
+          Acepto las políticas de privacidad
+          <input type="checkbox" name="politicas" required>
+          <span class="checkmark"></span>
+        </label>
+    
+        <!-- Sección de presupuesto -->
+        <h2>Presupuesto</h2>
+    
+        <label for="producto">Producto:</label>
+        <select name="producto" id="producto" onchange="calcularPresupuesto()">
+          <option value="queso">Queso (10€)</option>
+          <option value="sandia">Sandía (15€)</option>
+          <option value="fresas">Fresas/16unidades (50€)</option>
+        </select>
+        
+    
+        <label for="extras">Extras:</label>
+        <ul>
+          <li>
+            <input type="checkbox" name="extras" id="animaciones" value="animaciones" onchange="calcularPresupuesto()">
+            <label for="animaciones">Animaciones (+15€)</label>
+          </li>
+          <li>
+            <input type="checkbox" name="extras" id="scripts" value="scripts" onchange="calcularPresupuesto()">
+            <label for="scripts">Scripts (+40€)</label>
+          </li>
+          <li>
+            <input type="checkbox" name="extras" id="soporte" value="soporte" onchange="calcularPresupuesto()">
+            <label for="soporte">Soporte (+50€)</label>
+          </li>
+        </ul>        
+    
+        <label>Duración del servicio:</label>
+        <input type="number" name="plazo" oninput="calcularPresupuesto()" min="1" max="31"><br>
+    
+        <div id="presupuestoFinal"></div>
+    
+        <!-- Botón para enviar el formulario -->
+        <input type="submit" value="Enviar" /><br /><br />
+      </form>
+    </section>
+    
+        
+<!-- Inicio del footer -->
+<footer>
+  <!-- Contenedor principal del footer -->
+  <div class="footer-container">
+    <!-- Sección de iconos de redes sociales -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/"><img src="../imgs/instagram.png" alt="Instagram"></a>
+      <a href="https://www.twitter.com/"><img src="../imgs/twitter.png" alt="Twitter"></a>
+      <a href="https://www.linkedin.com/"><img src="../imgs/linkedin.png" alt="LinkedIn"></a>
+    </div>
+    <!-- Sección de información de contacto -->
+    <div class="contact-info">
+      <p>Correo electrónico: camiloarias.frg@gmail.com</p>
+      <p>Teléfono: (+34) 656378367</p>
+    </div>
+  </div>
+  <!-- Sección de aviso legal -->
+  <div class="legal-notice">
+    <p>© 2023, Todos los derechos reservados. Este sitio web ha sido creado como proyecto final del curso de diseño web. Cualquier uso no autorizado o duplicación de los materiales en este sitio web, sin el permiso expreso y por escrito del autor y propietario, está estrictamente prohibido. El contenido de este sitio web es puramente educativo y no representa ninguna opinión o posición oficial de la institución o empresas mencionadas.</p>
+  </div>
+    </footer>
+<!-- Fin del footer -->
+<script src="../scriptsjava/presupuesto.js"></script>
+</body>
+</html>
